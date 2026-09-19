@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Help Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    IT
+                </div>
+
+                <div>
+                    <div class="brand-title">
+                        IT Help Pro
+                    </div>
+
+                    <div class="brand-sub">
+                        Technical Support Portal
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="menu-label">
+                Workspace
+            </div>
+
+            <nav class="menu">
+
+                <button
+                    class="active"
+                    data-page="dashboard">
+
+                    <span class="menu-icon">
+                        ⌂
+                    </span>
+
+                    Dashboard
+
+                </button>
+
+
+                <button data-page="create">
+
+                    <span class="menu-icon">
+                        ＋
+                    </span>
+
+                    Create Ticket
+
+                </button>
+
+
+                <button data-page="history">
+
+                    <span class="menu-icon">
+                        ▤
+                    </span>
+
+                    Ticket History
+
+                </button>
+
+
+                <button data-page="search">
+
+                    <span class="menu-icon">
+                        ⌕
+                    </span>
+
+                    Search Ticket
+
+                </button>
+
+            </nav>
+
+
+            <div class="menu-label">
+                Support Center
+            </div>
+
+            <nav class="menu">
+
+                <button data-page="knowledge">
+
+                    <span class="menu-icon">
+                        ▣
+                    </span>
+
+                    Knowledge Base
+
+                </button>
+
+
+                <button data-page="troubleshooting">
+
+                    <span class="menu-icon">
+                        ⚙
+                    </span>
+
+                    Troubleshooting
+
+                </button>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="profile-mini">
+
+                    <div class="profile-avatar">
+                        IT
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            IT Support Portal
+                        </strong>
+
+                        <span>
+                            System Administrator
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================
+             MAIN
+        ========================== -->
+
+        <main class="main">
+
+            <header class="topbar">
+
+                <div class="top-left">
+
+                    <button
+                        class="mobile-btn"
+                        id="mobileBtn">
+
+                        ☰
+
+                    </button>
+
+
+                    <div class="breadcrumb">
+
+                        IT Help Pro /
+
+                        <strong id="pageTitle">
+                            Dashboard
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="top-right">
+
+                    <div class="online">
+
+                        <span class="online-dot"></span>
+
+                        System Online
+
+                    </div>
+
+
+                    <button
+                        class="theme"
+                        id="themeBtn">
+
+                        ◐
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <div class="content">
+
+
+                <!-- =========================
+                     DASHBOARD
+                ========================== -->
+
+                <section
+                    class="page active-page"
+                    data-page-section="dashboard">
+
+                    <div class="hero">
+
+                        <div>
+
+                            <h1>
+                                Good morning 👋
+                            </h1>
+
+                            <p>
+                                Here's what's happening with your IT support operations today.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="primary"
+                            onclick="openPage('create')">
+
+                            + New Ticket
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- STATS -->
+
+                    <div class="stats">
+
+                        <div class="stat">
+
+                            <div class="stat-head">
+
+                                <span class="stat-title">
+                                    Total Tickets
+                                </span>
+
+                                <div class="stat-icon i-purple">
+                                    🎫
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="stat-number"
+                                id="totalCount">
+
+                                0
+
+                            </div>
+
+                            <div class="stat-footer">
+                                All support requests
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <div class="stat-head">
+
+                                <span class="stat-title">
+                                    Open Tickets
+                                </span>
+
+                                <div class="stat-icon i-blue">
+                                    📂
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="stat-number"
+                                id="openCount">
+
+                                0
+
+                            </div>
+
+                            <div class="stat-footer">
+                                Waiting for support
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <div class="stat-head">
+
+                                <span class="stat-title">
+                                    In Progress
+                                </span>
+
+                                <div class="stat-icon i-orange">
+                                    🔧
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="stat-number"
+                                id="progressCount">
+
+                                0
+
+                            </div>
+
+                            <div class="stat-footer">
+                                Currently being handled
+                            </div>
+
+                        </div>
+
+
+                        <div class="stat">
+
+                            <div class="stat-head">
+
+                                <span class="stat-title">
+                                    Resolved
+                                </span>
+
+                                <div class="stat-icon i-green">
+                                    ✓
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="stat-number"
+                                id="resolvedCount">
+
+                                0
+
+                            </div>
+
+                            <div class="stat-footer">
+                                Successfully resolved
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MAIN GRID -->
+
+                    <div class="main-grid">
+
+
+                        <!-- Recent Tickets -->
+
+                        <div class="card">
+
+                            <div class="card-head">
+
+                                <div>
+
+                                    <h3>
+                                        Recent Tickets
+                                    </h3>
+
+                                    <span>
+                                        Latest requests
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="table-scroll">
+
+                                <table>
+
+                                    <thead>
+
+                                        <tr>
+                                            <th>Ticket</th>
+                                            <th>Issue</th>
+                                            <th>Category</th>
+                                            <th>Priority</th>
+                                            <th>Status</th>
+                                        </tr>
+
+                                    </thead>
+
+
+                                    <tbody id="recentTable">
+                                    </tbody>
+
+                                </table>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Quick Actions -->
+
+                        <div class="card">
+
+                            <div class="card-head">
+
+                                <div>
+
+                                    <h3>
+                                        Quick Actions
+                                    </h3>
+
+                                    <span>
+                                        Support tools
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="card-body">
+
+                                <div class="quick">
+
+
+                                    <div
+                                        class="quick-card"
+                                        onclick="quickTicket('Network')">
+
+                                        <div class="quick-icon">
+                                            🌐
+                                        </div>
+
+                                        <h4>
+                                            Network Issue
+                                        </h4>
+
+                                        <p>
+                                            Internet, Wi-Fi and DNS problems
+                                        </p>
+
+                                    </div>
+
+
+                                    <div
+                                        class="quick-card"
+                                        onclick="quickTicket('Computer')">
+
+                                        <div class="quick-icon">
+                                            💻
+                                        </div>
+
+                                        <h4>
+                                            Computer Issue
+                                        </h4>
+
+                                        <p>
+                                            Performance and hardware
+                                        </p>
+
+                                    </div>
+
+
+                                    <div
+                                        class="quick-card"
+                                        onclick="quickTicket('Windows')">
+
+                                        <div class="quick-icon">
+                                            🪟
+                                        </div>
+
+                                        <h4>
+                                            Windows Support
+                                        </h4>
+
+                                        <p>
+                                            Errors and configuration
+                                        </p>
+
+                                    </div>
+
+
+                                    <div
+                                        class="quick-card"
+                                        onclick="quickTicket('Account')">
+
+                                        <div class="quick-icon">
+                                            🔐
+                                        </div>
+
+                                        <h4>
+                                            Account Access
+                                        </h4>
+
+                                        <p>
+                                            Login and permissions
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Support Activity -->
+
+                                <div class="activity">
+
+                                    <div class="card-head activity-head">
+
+                                        <div>
+
+                                            <h3>
+                                                Support Activity
+                                            </h3>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div id="activityList">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     CREATE TICKET
+                ========================== -->
+
+                <section
+                    class="page"
+                    data-page-section="create">
+
+                    <div class="hero">
+
+                        <div>
+
+                            <h1>
+                                Create Support Ticket
+                            </h1>
+
+                            <p>
+                                Submit a technical issue to the IT support team.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card form-card">
+
+                        <div class="card-head">
+
+                            <div>
+
+                                <h3>
+                                    Ticket Information
+                                </h3>
+
+                                <span>
+                                    Required fields *
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="card-body">
+
+                            <form id="ticketForm">
+
+                                <div class="form-grid">
+
+
+                                    <div class="form-group">
+
+                                        <label>
+                                            Requester Name *
+                                        </label>
+
+                                        <input
+                                            id="requester"
+                                            required
+                                            placeholder="Enter requester name">
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label>
+                                            Issue Title *
+                                        </label>
+
+                                        <input
+                                            id="issueTitle"
+                                            required
+                                            placeholder="Example: Internet connection unavailable">
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label>
+                                            Category *
+                                        </label>
+
+                                        <select
+                                            id="category"
+                                            required>
+
+                                            <option value="">
+                                                Select category
+                                            </option>
+
+                                            <option>
+                                                Network
+                                            </option>
+
+                                            <option>
+                                                Computer
+                                            </option>
+
+                                            <option>
+                                                Windows
+                                            </option>
+
+                                            <option>
+                                                Printer
+                                            </option>
+
+                                            <option>
+                                                Account
+                                            </option>
+
+                                            <option>
+                                                Software
+                                            </option>
+
+                                            <option>
+                                                Other
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label>
+                                            Issue Type *
+                                        </label>
+
+                                        <select
+                                            id="issueType"
+                                            required>
+
+                                            <option value="">
+                                                Select issue type
+                                            </option>
+
+                                            <option>
+                                                Technical Issue
+                                            </option>
+
+                                            <option>
+                                                Access Issue
+                                            </option>
+
+                                            <option>
+                                                Hardware Issue
+                                            </option>
+
+                                            <option>
+                                                Software Issue
+                                            </option>
+
+                                            <option>
+                                                Network Issue
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label>
+                                            Priority *
+                                        </label>
+
+                                        <select
+                                            id="priority"
+                                            required>
+
+                                            <option value="">
+                                                Select priority
+                                            </option>
+
+                                            <option>
+                                                Low
+                                            </option>
+
+                                            <option>
+                                                Medium
+                                            </option>
+
+                                            <option>
+                                                High
+                                            </option>
+
+                                            <option>
+                                                Critical
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label>
+                                            Contact Method
+                                        </label>
+
+                                        <select id="contact">
+
+                                            <option>
+                                                Email
+                                            </option>
+
+                                            <option>
+                                                Phone
+                                            </option>
+
+                                            <option>
+                                                Internal Chat
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="form-group full">
+
+                                        <label>
+                                            Issue Description *
+                                        </label>
+
+                                        <textarea
+                                            id="description"
+                                            required
+                                            placeholder="Describe the issue and any error message..."></textarea>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-footer">
+
+                                    <button
+                                        type="button"
+                                        class="secondary"
+                                        onclick="resetForm()">
+
+                                        Clear
+
+                                    </button>
+
+
+                                    <button
+                                        type="submit"
+                                        class="primary">
+
+                                        Submit Ticket
+
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     HISTORY
+                ========================== -->
+
+                <section
+                    class="page"
+                    data-page-section="history">
+
+                    <div class="hero">
+
+                        <div>
+
+                            <h1>
+                                Ticket History
+                            </h1>
+
+                            <p>
+                                Review and manage submitted support requests.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="secondary"
+                            onclick="clearTickets()">
+
+                            Clear History
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-head">
+
+                            <div>
+
+                                <h3>
+                                    All Tickets
+                                </h3>
+
+                                <span id="historyCount">
+                                    0 tickets
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="table-scroll">
+
+                            <table>
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Ticket ID</th>
+                                        <th>Issue</th>
+                                        <th>Category</th>
+                                        <th>Priority</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody id="ticketTable">
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     SEARCH
+                ========================== -->
+
+                <section
+                    class="page"
+                    data-page-section="search">
+
+                    <div class="hero">
+
+                        <div>
+
+                            <h1>
+                                Search Ticket
+                            </h1>
+
+                            <p>
+                                Find a ticket using its unique Ticket ID.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-body">
+
+                            <div class="search">
+
+                                <input
+                                    id="searchInput"
+                                    placeholder="Example: IT-4821">
+
+
+                                <button
+                                    class="primary"
+                                    onclick="searchTicket()">
+
+                                    Search
+
+                                </button>
+
+                            </div>
+
+
+                            <div id="searchResult">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     KNOWLEDGE BASE
+                ========================== -->
+
+                <section
+                    class="page"
+                    data-page-section="knowledge">
+
+                    <div class="hero">
+
+                        <div>
+
+                            <h1>
+                                Knowledge Base
+                            </h1>
+
+                            <p>
+                                Practical resources for common IT support issues.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="kb-search">
+
+                        <input
+                            id="kbSearch"
+                            placeholder="Search knowledge base..."
+                            oninput="filterKnowledge()">
+
+                    </div>
+
+
+                    <div class="kb-grid">
+
+
+                        <div
+                            class="kb"
+                            data-search="internet network wifi dns">
+
+                            <div class="kb-icon">
+                                🌐
+                            </div>
+
+                            <h3>
+                                Internet Connectivity
+                            </h3>
+
+                            <p>
+                                Check IP configuration, gateway, DNS and network connectivity.
+                            </p>
+
+                            <span class="kb-tag">
+                                Network
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="kb"
+                            data-search="windows errors event viewer services">
+
+                            <div class="kb-icon">
+                                🪟
+                            </div>
+
+                            <h3>
+                                Windows Troubleshooting
+                            </h3>
+
+                            <p>
+                                Use Event Viewer, Services and Windows tools to diagnose issues.
+                            </p>
+
+                            <span class="kb-tag">
+                                Windows
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="kb"
+                            data-search="account password login access">
+
+                            <div class="kb-icon">
+                                🔐
+                            </div>
+
+                            <h3>
+                                Account &amp; Access
+                            </h3>
+
+                            <p>
+                                Basic troubleshooting for login, passwords and permissions.
+                            </p>
+
+                            <span class="kb-tag">
+                                Access
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="kb"
+                            data-search="printer printing spooler driver">
+
+                            <div class="kb-icon">
+                                🖨️
+                            </div>
+
+                            <h3>
+                                Printer Issues
+                            </h3>
+
+                            <p>
+                                Check printer connection, queue, drivers and Print Spooler.
+                            </p>
+
+                            <span class="kb-tag">
+                                Hardware
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="kb"
+                            data-search="computer slow cpu ram performance">
+
+                            <div class="kb-icon">
+                                💻
+                            </div>
+
+                            <h3>
+                                Computer Performance
+                            </h3>
+
+                            <p>
+                                Check CPU, memory, disk usage and startup applications.
+                            </p>
+
+                            <span class="kb-tag">
+                                Performance
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="kb"
+                            data-search="software application installation">
+
+                            <div class="kb-icon">
+                                📦
+                            </div>
+
+                            <h3>
+                                Software Problems
+                            </h3>
+
+                            <p>
+                                Check application settings, permissions, updates and installation.
+                            </p>
+
+                            <span class="kb-tag">
+                                Software
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================
+                     TROUBLESHOOTING
+                ========================== -->
+
+                <section
+                    class="page"
+                    data-page-section="troubleshooting">
+
+                    <div class="hero">
+
+                        <div>
+
+                            <h1>
+                                Troubleshooting Center
+                            </h1>
+
+                            <p>
+                                Follow guided steps to diagnose common IT problems.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="trouble-grid">
+
+
+                        <div
+                            class="trouble"
+                            onclick="showTrouble('internet')">
+
+                            <div class="trouble-icon">
+                                🌐
+                            </div>
+
+                            <h3>
+                                Internet
+                            </h3>
+
+                        </div>
+
+
+                        <div
+                            class="trouble"
+                            onclick="showTrouble('computer')">
+
+                            <div class="trouble-icon">
+                                💻
+                            </div>
+
+                            <h3>
+                                Computer
+                            </h3>
+
+                        </div>
+
+
+                        <div
+                            class="trouble"
+                            onclick="showTrouble('windows')">
+
+                            <div class="trouble-icon">
+                                🪟
+                            </div>
+
+                            <h3>
+                                Windows
+                            </h3>
+
+                        </div>
+
+
+                        <div
+                            class="trouble"
+                            onclick="showTrouble('printer')">
+
+                            <div class="trouble-icon">
+                                🖨️
+                            </div>
+
+                            <h3>
+                                Printer
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="card trouble-result"
+                        id="troubleResult">
+
+                        <div class="card-head">
+
+                            <div>
+
+                                <h3 id="troubleTitle">
+                                    Troubleshooting
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="card-body"
+                            id="troubleSteps">
+
+                            <p>
+                                Select an issue above to see troubleshooting steps.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================
+         MODAL
+    ========================== -->
+
+    <div
+        class="modal-overlay"
+        id="modalOverlay">
+
+        <div class="modal-box">
+
+            <div class="modal-head">
+
+                <h3>
+                    Ticket Created
+                </h3>
+
+
+                <button
+                    class="close"
+                    onclick="closeModal()">
+
+                    ×
+
+                </button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <div class="success">
+                    ✓
+                </div>
+
+
+                <h3>
+                    Ticket submitted successfully
+                </h3>
+
+
+                <p>
+                    Your support request has been created.
+                </p>
+
+
+                <div
+                    class="modal-id"
+                    id="generatedId">
+                </div>
+
+
+                <button
+                    class="primary"
+                    onclick="closeModal();openPage('history')">
+
+                    View Ticket
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
