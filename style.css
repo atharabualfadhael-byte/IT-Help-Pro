@@ -4,13 +4,13 @@
     --text: #172033;
     --muted: #6b7280;
     --border: #e5e7eb;
-    --primary: #5b5bd6;
-    --primary-dark: #4949ba;
+    --primary: #6161c8e7;
+    --primary-dark: #a0a0f1;
     --sidebar: #111827;
-    --sidebar-muted: #9ca3af;
-    --success: #16a34a;
-    --danger: #dc2626;
-    --warning: #d97706;
+    --sidebar-muted: #8497b8;
+    --success: #134324;
+    --danger: #761212;
+    --warning: #a05908;
     --shadow: 0 8px 30px rgba(17, 24, 39, 0.06);
 }
 
